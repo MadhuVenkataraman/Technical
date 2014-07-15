@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Task Manager</title>
+		<script type="text/javascript" src="todoist.js"></script>
+		<style type ="text/css">
+		body {
+		 background-color : white;
+		 margin-left : 100px;
+		 margin-right: 100px;
+		 margin-top : 10px;
+		}
+		span#Id {
+			visibility:  false;
+		}
+		div#msgArea {
+			
+			top: 0px;
+			left:0px;
+			color: rgb(83,175,19);
+	    }
+	    div#taskInput
+	    {
+	    	top: 0px;
+			left: 0px;
+			padding: 15px;
+			background-color: #b8d1f3;
+	    }
+		.TaskGrid{
+			width:100%; 
+			border-collapse:collapse; 
+		}
+		.TaskGrid td, th{ 
+			padding:7px; border:#4e95f4 1px solid;
+		}
+		/* provide some minimal visual accomodation for IE8 and below */
+		.TaskGrid tr{
+			background: #b8d1f3;
+		}
+		/*  Define the background color for all the ODD background rows  */
+		.TaskGrid tr:nth-child(odd){ 
+			background: #b8d1f3;
+		}
+		/*  Define the background color for all the EVEN background rows  */
+		.TaskGrid tr:nth-child(even){
+			background: #dae5f4;
+		}
+	</style>
+	</head>
+	<body>
+		<div>
+			<div id="msgArea">Placeholder to display success or error messages....</div>
+		</div>
+		<div id="taskInput">
+			<span id="Id"></span>
+			<label id="lblTask" for="desc">Task</label> <input type="textbox" id="desc"/>
+			<label id="lblTask" for="dueDate">Date</label> <input type="textbox" id="dueDate"/>
+			<label id="lblTask" for="area">Area</label><input type="textbox" id="area"/>
+		</div>
+		<div id="submit">
+			<input type="button" id="save" value="Add Task"/>
+		</div>
+		<div id="taskList">
+			<table class ="TaskGrid" id = "taskGrid">
+			</td>
+		</div>
+	</body>
+</html>
